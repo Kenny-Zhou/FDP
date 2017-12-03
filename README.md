@@ -1,2 +1,2 @@
 # FDP
-Stock Exchange System
+Hybrid Recommendation based Securities Lending System
