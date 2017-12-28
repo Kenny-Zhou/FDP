@@ -7,7 +7,12 @@
     "params" : {
       "name": "sample-handmade-data.txt",
       "appName": "SecLendingRecByCCO",
-      "eventNames": ["borrow", "search"]
+      "eventNames": ["borrow", "search", "locate", "viewSec", "viewReport", "ignoreSec"],
+      "eventWindow": {
+        "duration": "30 days",
+        "removeDuplicates": false,
+        "compressProperties": false
+      } 
     }
   },
   "sparkConf": {
@@ -19,19 +24,34 @@
     "spark.executor.cores": "2",
     "spark.task.cpus": "2",
     "spark.default.parallelism": "16",
-    "es.index.auto.create": "true"
+    "es.index.auto.create": "true",
+    "es.nodes": "node1,node2"
   },
   "algorithms": [
     {
-      "comment": "based on CCO algorithm",
+      "comment": "this is based on CCO algorithm",
       "name": "ur",
       "params": {
         "appName": "SecLendingRecByCCO",
         "indexName": "urindex",
         "typeName": "items",
         "comment": "must have data for the first event or the model will not build, other events are optional",
-        "eventNames": ["borrow", "search"]
-      }
+        "indicators": [
+            {
+                "name": "borrow"
+            },{
+                "name": "search"
+            },{
+                "name": "locate"
+            },{
+                "name": "viewSec"
+            },{
+                "name": "viewReport"
+            },{
+                "name": "ignoreSec"
+            }
+        ]
+     }
     }
   ]
 }

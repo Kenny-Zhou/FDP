@@ -1,0 +1,55 @@
+{ 
+	"user": "115735"
+	, "number": 5
+	, "blackList": ["36156474", "36156453", "36156241", "36156223"...]
+}
+
+
+{
+  "user": "115735", 
+  "num": 5,
+  "userBias": 2, // favor personal recommendations
+   "dateRange": {
+    "name": "tradeDate",
+    "before": "2017-12-31T11:28:45.114-07:00",
+    "after": "2017-12-01T11:28:45.114-07:00"
+  },
+  "blacklistItems": ["36156474", "36156453", "36156241", "36156223"...]
+}
+
+{
+  "fields": [
+    {
+      "name": "region"
+      "values": ["NY"],
+      "bias": -1 }
+    },{
+      "name": "entity",
+      "values": ["CGMI"],
+      "bias": 1.02	    
+    },{
+      "name": "pfClass",
+      "values": ["EQ"],
+      "bias": 1.02
+    },{
+      "name": "typeCode",
+      "values": ["EQDR","STCK"],
+      "bias": 1.02
+    }	       
+  ],
+  "dateRange": {
+    "name": "tradeDate",
+    "before": "2017-12-31T11:28:45.114-07:00",
+    "after": "2017-12-01T11:28:45.114-07:00"
+  },
+  "blacklistItems": ["36156474", "36156453", "36156241", "36156223"...]
+}
+
+{
+  "item": "53454543513", 
+  "num": 5,
+  "itemBias": 1,
+  "blacklistItems": ["36156474", "36156453", "36156241", "36156223"...],
+  "returnSelf": false
+}
+
