@@ -1,6 +1,10 @@
 离线试验，后续参数调整可以马上验证得分。根据得分进行调整。
 收集数据：100个client最近一周的交易记录作为测试的数据集。
-
+次要标识可以不断调整 A/B test
+split, event counting MAP test
+integration test
+The integration test only compares to what was returned in previous tests, this does not check the quality of results. It is meant to test that the system is integrated and running correctly.
+ boost promoted items
 准确率，召回率，训练时常
 
 覆盖率算所有被推荐商品占商品总数的比重：：
